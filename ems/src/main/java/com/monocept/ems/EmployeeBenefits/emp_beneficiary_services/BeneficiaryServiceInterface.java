@@ -15,4 +15,6 @@ public interface BeneficiaryServiceInterface{
     public boolean deleteBeneficiaryById(int beneficiaryId);
 
     public List<BeneficiaryDTO> getBeneficiaryList();
+
+    
 }
