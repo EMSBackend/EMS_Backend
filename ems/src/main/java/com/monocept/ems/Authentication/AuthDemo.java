@@ -1,3 +1,4 @@
+package com.monocept.ems.authentication;
 // package com.monocept.ems.Authentication;
 
 // import javax.persistence.Column;
