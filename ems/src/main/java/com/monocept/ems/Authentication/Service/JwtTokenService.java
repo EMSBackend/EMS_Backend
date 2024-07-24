@@ -1,9 +1,9 @@
-package com.monocept.ems.Authentication.Service;
+// package com.monocept.ems.Authentication.Service;
 
-public interface JwtTokenService {
+// public interface JwtTokenService {
 
-	boolean createTokenEntry(String employeeId, String email, String jwtToken);
+// 	boolean createTokenEntry(String employeeId, String email, String jwtToken);
 
-	boolean isTokenActive(String username, String jwt);
+// 	boolean isTokenActive(String username, String jwt);
 
-}
+// }

@@ -1,36 +1,36 @@
-package com.monocept.ems.Authentication.DTO;
+// package com.monocept.ems.Authentication.DTO;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
+// import javax.validation.constraints.NotBlank;
+// import javax.validation.constraints.NotEmpty;
 
-import org.springframework.lang.NonNull;
+// import org.springframework.lang.NonNull;
 
-public class LoginRequestDTO {
+// public class LoginRequestDTO {
 
-	@NotBlank
-	@NonNull
-	@NotEmpty
-	private String employeeId;
+// 	@NotBlank
+// 	@NonNull
+// 	@NotEmpty
+// 	private String employeeId;
 
-	@NotBlank
-	@NonNull
-	@NotEmpty
-	private String password;
+// 	@NotBlank
+// 	@NonNull
+// 	@NotEmpty
+// 	private String password;
 
-	public String getEmployeeId() {
-		return employeeId;
-	}
+// 	public String getEmployeeId() {
+// 		return employeeId;
+// 	}
 
-	public void setEmployeeId(String employeeId) {
-		this.employeeId = employeeId;
-	}
+// 	public void setEmployeeId(String employeeId) {
+// 		this.employeeId = employeeId;
+// 	}
 
-	public String getPassword() {
-		return password;
-	}
+// 	public String getPassword() {
+// 		return password;
+// 	}
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+// 	public void setPassword(String password) {
+// 		this.password = password;
+// 	}
 
-}
+// }

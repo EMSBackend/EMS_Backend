@@ -1,9 +1,9 @@
-package com.monocept.ems.Employee.Service;
+// package com.monocept.ems.Employee.Service;
 
-import com.monocept.ems.Authentication.Model.EmployeeDetails;
+// import com.monocept.ems.Authentication.Model.EmployeeDetails;
 
-public interface EmployeeService {
+// public interface EmployeeService {
 
-	EmployeeDetails getEmployeeDetails(String userId);
+// 	EmployeeDetails getEmployeeDetails(String userId);
 
-}
+// }
