@@ -41,6 +41,10 @@ public class AuthenticationService implements UserDetailsService {
 	@Autowired
 	private JwtTokenService jwtTokenService;
 
+	/*
+	 * Method to check if user details exists in our system and added role grant
+	 * authority of user
+	 */
 	public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
 		logger.info("AuthenticationService : loadUserByUsername : username : {}", userId);
 		EmployeeDetails employeeDetails = null;
@@ -56,11 +60,13 @@ public class AuthenticationService implements UserDetailsService {
 
 	}
 
+	/* Method for login functionality with token creation for security */
 	public ResponseEntity<?> login(LoginRequestDTO loginRequestDTO) {
 		logger.info("Inside AuthenticationService ::: Inside Login :Employee id {}", loginRequestDTO.getEmployeeId());
 		try {
-	//			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequestDTO.getEmployeeId(),
-	//					loginRequestDTO.getPassword()));
+			// authenticationManager.authenticate(new
+			// UsernamePasswordAuthenticationToken(loginRequestDTO.getEmployeeId(),
+			// loginRequestDTO.getPassword()));
 			UserDetails userDetails = loadUserByUsername(loginRequestDTO.getEmployeeId());
 			logger.info("AuthenticationService : authenticateCredentials : credentials authenticated");
 			EmployeeDetails employeeDetails = employeeService.getEmployeeDetails(loginRequestDTO.getEmployeeId());

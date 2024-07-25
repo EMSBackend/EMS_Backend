@@ -40,6 +40,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 	@Autowired
 	private EmployeeService employeeService;
 
+	/*
+	 * Method to filter the incoming request to authenticate jwt token or is valid
+	 * request
+	 */
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
