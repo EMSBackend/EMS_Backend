@@ -2,6 +2,7 @@ package com.monocept.ems.employeebenefits.empbeneficiaryservices.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,13 +16,15 @@ import com.monocept.ems.employeebenefits.empbenefitsrepository.EmployeeRepositor
 public class EmployeeServiceImpl 
     implements EmployeeServiceInterface {
    
+    private static Logger logger =
+        Logger.getLogger(EmployeeServiceImpl.class.getName());
+    
     @Autowired
     EmployeeRepository employeeRepository;
 
 
     @Override
     public EmployeeDTO getEmpById(String empIdStr) {
-        System.out.println("Inside getEmpById method");
         int empId = -1;
         try{
             empId = Integer.parseInt(empIdStr);
@@ -33,7 +36,7 @@ public class EmployeeServiceImpl
             }
 
         }catch(Exception e){
-            System.out.println("getEmpById() : exception "+e );
+            logger.warning("getEmpById() : exception  :: "+e);
         }
 
         return null;
@@ -47,7 +50,6 @@ public class EmployeeServiceImpl
         
         for(EmployeeModel employeeModel : employeeRepository.findAll()){
 
-            // System.out.println("Emp :: "+employeeModel.getFirst_name());
             employeeDTOList.add(employeeModel.toEmployeeDTO());
         }
 

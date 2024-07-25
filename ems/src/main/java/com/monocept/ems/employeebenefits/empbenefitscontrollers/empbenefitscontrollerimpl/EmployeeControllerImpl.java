@@ -1,7 +1,6 @@
 package com.monocept.ems.employeebenefits.empbenefitscontrollers.empbenefitscontrollerimpl;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,17 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.monocept.ems.employeebenefits.empbeneficiaryservices.impl.EmployeeRespectiveBenefitImpl;
 import com.monocept.ems.employeebenefits.empbeneficiaryservices.impl.EmployeeServiceImpl;
 import com.monocept.ems.employeebenefits.empbenefitscontrollers.EmployeeControllerInterface;
 import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeDTO;
-import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
 
 @RestController
-@RequestMapping("/beneficiary/emp")
+@RequestMapping("/employees")
 @CrossOrigin(origins = "*")
 public class EmployeeControllerImpl 
     implements EmployeeControllerInterface {
@@ -28,41 +24,8 @@ public class EmployeeControllerImpl
     @Autowired
     EmployeeServiceImpl employeeServiceImpl;
 
-    @Autowired
-    EmployeeRespectiveBenefitImpl employeeRespectiveBenefitImpl;
-
-
     @Override
-    @GetMapping("/get-emp-details-by-id")
-    public ResponseEntity<List<EmployeeDTO>> 
-        getEmployeeById(@RequestParam String empId ){
-            System.out.println("addEmployee() :: ");
-        
-            EmployeeDTO employeeDTO =  employeeServiceImpl.getEmpById(empId);
-
-            List<EmployeeDTO> employeeDTOList = new ArrayList<>();
-
-            if(employeeDTO == null){
-                return ResponseEntity
-                .status(HttpStatus.OK)
-                .body(employeeDTOList);
-            }
-
-            System.out.println(
-                "get-emp"+employeeDTO.getFirst_name()
-            );
-            
-            employeeDTOList.add(employeeDTO);
-
-            return ResponseEntity
-                .status(HttpStatus.OK)
-                .body(employeeDTOList);
-    }
-
-    
-    
-    @Override
-    @GetMapping("/get-all-employee")
+    @GetMapping("/")
     public ResponseEntity<List<EmployeeDTO>> 
         getAllEmployee() {
         
@@ -75,30 +38,4 @@ public class EmployeeControllerImpl
     }
 
 
-    @Override
-    @GetMapping("/get-employee-respective-benefit")
-    public ResponseEntity<List<EmployeeRespectiveBenefitDTO>> 
-        getEmployeeRespectiveBenefit(@RequestParam String empId) {
-
-        try{
-           int id = Integer.parseInt(empId);
-           
-           List<EmployeeRespectiveBenefitDTO> resultList 
-            =   employeeRespectiveBenefitImpl.getEmployeeRespectiveBenfitList(id);
-        
-            
-            return ResponseEntity
-            .status(HttpStatus.OK)
-            .body(resultList);
-
-
-        }catch(Exception e){
-            System.out.println("getEmpRespectiveBenefit() :: Exception : "+e);
-        }
-        
-        
-        return ResponseEntity
-            .status(HttpStatus.OK)
-            .body(new ArrayList<>());
-    }
 }

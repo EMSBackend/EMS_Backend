@@ -6,12 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import java.sql.Connection;
+import java.util.logging.Logger;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 
 @SpringBootApplication
 public class EmsApplication implements CommandLineRunner {
+
+	private static Logger logger = 
+		Logger.getLogger(EmsApplication.class.getName());
 
 	@Autowired
 	private DataSource dataSource;
@@ -25,9 +30,9 @@ public class EmsApplication implements CommandLineRunner {
 	@Override
 	public void run(String ...args){
 		try(Connection connection = dataSource.getConnection()){
-			System.out.println("Successful ---- Db Connection");
+			logger.info("Successful ---- Db Connection");
 		}catch(Exception e){
-			System.out.println("Failure ----	  Db connection :: "+e);
+			logger.warning("Failure :: Db connection :: "+e);
 		}
 	}
 
