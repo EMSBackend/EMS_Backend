@@ -1,4 +1,4 @@
-package com.monocept.ems.employeebenefits.empbeneficiaryentities;
+package com.monocept.ems.employeebenefits.empbenefitsentities;
 
 import java.sql.Date;
 
@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.monocept.ems.employeebenefits.empbeneficiarydtos.EmployeeRespectiveBenefitDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

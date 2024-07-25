@@ -1,4 +1,4 @@
-package com.monocept.ems.employeebenefits.empbeneficiaryentities;
+package com.monocept.ems.employeebenefits.empbenefitsentities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.monocept.ems.employeebenefits.empbeneficiarydtos.BenefitDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.BenefitDTO;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,7 +16,7 @@ import lombok.Setter;
 @Table(name="benefits")
 @Setter
 @Getter
-public class BeneficiaryModel {
+public class BenefitModel {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

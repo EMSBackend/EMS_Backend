@@ -1,12 +1,12 @@
-package com.monocept.ems.employeebenefits.empbeneficiarycontrollers;
+package com.monocept.ems.employeebenefits.empbenefitscontrollers;
 
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.monocept.ems.employeebenefits.empbeneficiarydtos.EmployeeDTO;
-import com.monocept.ems.employeebenefits.empbeneficiarydtos.EmployeeRespectiveBenefitDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
 
 public interface EmployeeControllerInterface {
     

@@ -2,15 +2,15 @@ package com.monocept.ems.employeebenefits.empbeneficiaryservices;
 
 import java.util.List;
 
-import com.monocept.ems.employeebenefits.empbeneficiarydtos.BenefitDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.BenefitDTO;
 
-public interface BenefitServiceInterface{
+public interface BenefitsServiceInterface{
     public BenefitDTO getBenefitById(String id);
 
-    public boolean 
+    public void 
         updateBenefitById(int empId, BenefitDTO benefitDTO);
 
-    public List<BenefitDTO> getAllBenefitList();
+    public List<BenefitDTO> getBenefits();
 
     
 }

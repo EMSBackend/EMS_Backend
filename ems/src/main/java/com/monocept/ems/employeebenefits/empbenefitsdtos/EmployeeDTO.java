@@ -1,8 +1,8 @@
-package com.monocept.ems.employeebenefits.empbeneficiarydtos;
+package com.monocept.ems.employeebenefits.empbenefitsdtos;
 
 import java.sql.Date;
 
-import com.monocept.ems.employeebenefits.empbeneficiaryentities.EmployeeModel;
+import com.monocept.ems.employeebenefits.empbenefitsentities.EmployeeModel;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

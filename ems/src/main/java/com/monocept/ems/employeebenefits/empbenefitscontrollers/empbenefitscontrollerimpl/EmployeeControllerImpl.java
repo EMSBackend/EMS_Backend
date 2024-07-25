@@ -1,4 +1,4 @@
-package com.monocept.ems.employeebenefits.empbeneficiarycontrollers.empbeneficiarycontrollerimpl;
+package com.monocept.ems.employeebenefits.empbenefitscontrollers.empbenefitscontrollerimpl;
 
 
 import java.util.ArrayList;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.monocept.ems.employeebenefits.empbeneficiarycontrollers.EmployeeControllerInterface;
-import com.monocept.ems.employeebenefits.empbeneficiarydtos.EmployeeDTO;
-import com.monocept.ems.employeebenefits.empbeneficiarydtos.EmployeeRespectiveBenefitDTO;
 import com.monocept.ems.employeebenefits.empbeneficiaryservices.impl.EmployeeRespectiveBenefitImpl;
 import com.monocept.ems.employeebenefits.empbeneficiaryservices.impl.EmployeeServiceImpl;
+import com.monocept.ems.employeebenefits.empbenefitscontrollers.EmployeeControllerInterface;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
 
 @RestController
 @RequestMapping("/beneficiary/emp")

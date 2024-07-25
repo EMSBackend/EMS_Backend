@@ -1,6 +1,6 @@
-package com.monocept.ems.employeebenefits.empbeneficiarydtos;
+package com.monocept.ems.employeebenefits.empbenefitsdtos;
 
-import com.monocept.ems.employeebenefits.empbeneficiaryentities.BeneficiaryModel;
+import com.monocept.ems.employeebenefits.empbenefitsentities.BenefitModel;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,8 +38,8 @@ public class BenefitDTO {
     private String beneficiary_name;
     
 
-    public BeneficiaryModel toBeneficiaryModel(){
-        BeneficiaryModel beneficiaryModel = new BeneficiaryModel();
+    public BenefitModel toBeneficiaryModel(){
+        BenefitModel beneficiaryModel = new BenefitModel();
         beneficiaryModel.setBenefit_id(this.benefit_id);
         
         beneficiaryModel.setBenefit_name(this.benefit_name);

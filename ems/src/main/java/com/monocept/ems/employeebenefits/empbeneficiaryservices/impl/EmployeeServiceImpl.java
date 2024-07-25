@@ -6,10 +6,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.monocept.ems.employeebenefits.empbeneficiarydtos.EmployeeDTO;
-import com.monocept.ems.employeebenefits.empbeneficiaryentities.EmployeeModel;
-import com.monocept.ems.employeebenefits.empbeneficiaryrepository.EmployeeRepository;
 import com.monocept.ems.employeebenefits.empbeneficiaryservices.EmployeeServiceInterface;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeDTO;
+import com.monocept.ems.employeebenefits.empbenefitsentities.EmployeeModel;
+import com.monocept.ems.employeebenefits.empbenefitsrepository.EmployeeRepository;
 
 @Service
 public class EmployeeServiceImpl 
