@@ -32,7 +32,7 @@ public class BeneficiaryControllerImpl
     @GetMapping("/get-beneficiary-by-id")
     public ResponseEntity<BenefitDTO> 
         getBenefitByID(@RequestParam String id) {
-        
+        // null and empty check on employee id before fetching Benneficary details
         BenefitDTO beneficiaryDTO 
             = beneficiaryServiceImpl
              .getBenefitById(id);
