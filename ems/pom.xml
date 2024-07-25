@@ -15,6 +15,11 @@
 	<description>Employee Management System</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<properties>
+		<!-- <sonar.projectKey>your_project_key</sonar.projectKey>
+		<sonar.host.url>http://localhost:9000</sonar.host.url>
+		<sonar.login>your_sonar_token</sonar.login> -->
+</properties>
 	</properties>
 	<dependencies>
 		<dependency>
