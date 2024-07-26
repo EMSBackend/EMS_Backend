@@ -11,17 +11,9 @@ import javax.persistence.Table;
 
 import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 @Entity
 @Table(name = "employee_benefits")
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
+
 public class EmployeeRespectiveBenefitModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,6 +35,58 @@ public class EmployeeRespectiveBenefitModel {
     private Date endDate;
 
 
+
+
+    public Integer getEmployeeBenefitId() {
+        return employeeBenefitId;
+    }
+
+
+    public void setEmployeeBenefitId(Integer employeeBenefitId) {
+        this.employeeBenefitId = employeeBenefitId;
+    }
+
+
+    public Integer getEmployeeId() {
+        return employeeId;
+    }
+
+
+    public void setEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
+    }
+
+
+    public Integer getBenefitId() {
+        return benefitId;
+    }
+
+
+    public void setBenefitId(Integer benefitId) {
+        this.benefitId = benefitId;
+    }
+
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    
     public EmployeeRespectiveBenefitDTO toEmpRespectiveBenefitModel(){
         EmployeeRespectiveBenefitDTO employeeRespectiveBenefitDTO
             = new EmployeeRespectiveBenefitDTO();

@@ -4,15 +4,6 @@ import java.sql.Date;
 
 import com.monocept.ems.employeebenefits.empbenefitsentities.EmployeeRespectiveBenefitModel;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
 public class EmployeeRespectiveBenefitDTO {
     private Integer employeeBenefitId;
     private Integer employeeId;
@@ -40,5 +31,45 @@ public class EmployeeRespectiveBenefitDTO {
             .setEndDate(this.endDate);
 
         return employeeRespectiveBenefitsModel;
+    }
+
+    public Integer getEmployeeBenefitId() {
+        return employeeBenefitId;
+    }
+
+    public void setEmployeeBenefitId(Integer employeeBenefitId) {
+        this.employeeBenefitId = employeeBenefitId;
+    }
+
+    public Integer getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public Integer getBenefitId() {
+        return benefitId;
+    }
+
+    public void setBenefitId(Integer benefitId) {
+        this.benefitId = benefitId;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 }
