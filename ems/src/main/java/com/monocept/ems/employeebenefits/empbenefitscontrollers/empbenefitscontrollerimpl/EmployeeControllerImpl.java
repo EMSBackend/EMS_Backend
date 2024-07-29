@@ -15,7 +15,12 @@ import com.monocept.ems.employeebenefits.empbeneficiaryservices.impl.EmployeeSer
 import com.monocept.ems.employeebenefits.empbenefitscontrollers.EmployeeControllerInterface;
 import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeDTO;
 
+// import io.swagger.annotations.Api;
+// import io.swagger.annotations.ApiOperation;
+
+
 @RestController
+// @Api(tags = "Employee Controller")
 @RequestMapping("/employees")
 @CrossOrigin(origins = "*")
 public class EmployeeControllerImpl 
@@ -26,6 +31,7 @@ public class EmployeeControllerImpl
 
     @Override
     @GetMapping("/")
+    // @ApiOperation("Get all employeescl")
     public ResponseEntity<List<EmployeeDTO>> 
         getAllEmployee() {
         
