@@ -16,11 +16,11 @@ public class BenefitModel {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer benefit_id = 0;
+    private Integer benefitId = 0;
 
     // @Nonnull
     @Column(name="benefit_name")
-    private String benefit_name = "";
+    private String benefitName = "";
 
     
     // @Nonnull
@@ -30,64 +30,64 @@ public class BenefitModel {
     
     // @Nonnull
     @Column(name="start_date")
-    private String start_date = "";
+    private String startDate = "";
 
     
     // @Nonnull
     @Column(name="end_date")
-    private String end_date = "";
+    private String endDate = "";
 
     
     // @Nonnull
     @Column(name="beneficiary_id")
-    private Integer beneficiary_id = 0;
+    private Integer beneficiaryId = 0;
 
     
     // @Nonnull
     @Column(name="beneficiary_cost")
-    private Integer beneficiary_cost = 0;
+    private Integer beneficiaryCost = 0;
 
 
     // @Nonnull
     @Column(name="beneficiary_desc")
-    private String beneficiary_desc = "";
+    private String beneficiaryDesc = "";
 
     
     // @Nonnull
     @Column(name="beneficiary_duration_months")
-    private Integer beneficiary_duration_months = 0;
+    private Integer beneficiaryDurationMonths = 0;
 
     // @Nonnull
     @Column(name="beneficiary_name")
-    private String beneficiary_name = "";
+    private String beneficiaryName = "";
     
 
 
     
 
-    public Integer getBenefit_id() {
-        return benefit_id;
+    public Integer getBenefitId() {
+        return benefitId;
     }
 
 
 
 
-    public void setBenefit_id(Integer benefit_id) {
-        this.benefit_id = benefit_id;
+    public void setBenefitId(Integer benefitId) {
+        this.benefitId = benefitId;
     }
 
 
 
 
-    public String getBenefit_name() {
-        return benefit_name;
+    public String getBenefitName() {
+        return benefitName;
     }
 
 
 
 
-    public void setBenefit_name(String benefit_name) {
-        this.benefit_name = benefit_name;
+    public void setBenefitName(String benefitName) {
+        this.benefitName = benefitName;
     }
 
 
@@ -107,117 +107,120 @@ public class BenefitModel {
 
 
 
-    public String getStart_date() {
-        return start_date;
+    public String getStartDate() {
+        return startDate;
     }
 
 
 
 
-    public void setStart_date(String start_date) {
-        this.start_date = start_date;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
 
 
 
-    public String getEnd_date() {
-        return end_date;
+    public String getEndDate() {
+        return endDate;
     }
 
 
 
 
-    public void setEnd_date(String end_date) {
-        this.end_date = end_date;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
 
 
 
-    public Integer getBeneficiary_id() {
-        return beneficiary_id;
+    public Integer getBeneficiaryId() {
+        return beneficiaryId;
     }
 
 
 
 
-    public void setBeneficiary_id(Integer beneficiary_id) {
-        this.beneficiary_id = beneficiary_id;
+    public void setBeneficiaryId(Integer beneficiaryId) {
+        this.beneficiaryId = beneficiaryId;
     }
 
 
 
 
-    public Integer getBeneficiary_cost() {
-        return beneficiary_cost;
+    public Integer getBeneficiaryCost() {
+        return beneficiaryCost;
     }
 
 
 
 
-    public void setBeneficiary_cost(Integer beneficiary_cost) {
-        this.beneficiary_cost = beneficiary_cost;
+    public void setBeneficiaryCost(Integer beneficiaryCost) {
+        this.beneficiaryCost = beneficiaryCost;
     }
 
 
 
 
-    public String getBeneficiary_desc() {
-        return beneficiary_desc;
+    public String getBeneficiaryDesc() {
+        return beneficiaryDesc;
     }
 
 
 
 
-    public void setBeneficiary_desc(String beneficiary_desc) {
-        this.beneficiary_desc = beneficiary_desc;
+    public void setBeneficiaryDesc(String beneficiaryDesc) {
+        this.beneficiaryDesc = beneficiaryDesc;
     }
 
 
 
 
-    public Integer getBeneficiary_duration_months() {
-        return beneficiary_duration_months;
+    public Integer getBeneficiaryDurationMonths() {
+        return beneficiaryDurationMonths;
     }
 
 
 
 
-    public void setBeneficiary_duration_months(Integer beneficiary_duration_months) {
-        this.beneficiary_duration_months = beneficiary_duration_months;
+    public void setBeneficiaryDurationMonths(Integer beneficiaryDurationMonths) {
+        this.beneficiaryDurationMonths = beneficiaryDurationMonths;
     }
 
 
 
 
-    public String getBeneficiary_name() {
-        return beneficiary_name;
+    public String getBeneficiaryName() {
+        return beneficiaryName;
     }
 
 
 
 
-    public void setBeneficiary_name(String beneficiary_name) {
-        this.beneficiary_name = beneficiary_name;
+    public void setBeneficiaryName(String beneficiaryName) {
+        this.beneficiaryName = beneficiaryName;
     }
 
 
     
-    public BenefitDTO tobeneficiaryDTO(){
+    public BenefitDTO tobenefitDTO(){
         BenefitDTO beneficiaryDTO = new BenefitDTO();
-        beneficiaryDTO.setBenefit_id(this.benefit_id);
+        beneficiaryDTO.setBenefit_id(this.benefitId);
         
-        beneficiaryDTO.setBenefit_name(this.benefit_name);
+        beneficiaryDTO.setBenefit_name(this.benefitName);
         beneficiaryDTO.setDescription(this.description);
-        beneficiaryDTO.setStart_date(this.start_date);
-        beneficiaryDTO.setEnd_date(this.end_date);
+        beneficiaryDTO.setStart_date(this.startDate);
+        beneficiaryDTO.setEnd_date(this.endDate);
         
-        beneficiaryDTO.setBeneficiary_id(this.beneficiary_id);
-        beneficiaryDTO.setBeneficiary_cost(this.beneficiary_cost);
-        beneficiaryDTO.setBeneficiary_desc(this.beneficiary_desc);
-        beneficiaryDTO.setBeneficiary_duration_months(this.beneficiary_duration_months);
-        beneficiaryDTO.setBeneficiary_name(this.beneficiary_name);
+        beneficiaryDTO.setBeneficiary_id(this.beneficiaryId);
+        beneficiaryDTO.setBeneficiary_cost(this.beneficiaryCost);
+        beneficiaryDTO.setBeneficiary_desc(this.beneficiaryDesc);
+        beneficiaryDTO
+            .setBeneficiary_duration_months(
+                this.beneficiaryDurationMonths);
+                
+        beneficiaryDTO.setBeneficiary_name(this.beneficiaryName);
 
         return beneficiaryDTO;
     }

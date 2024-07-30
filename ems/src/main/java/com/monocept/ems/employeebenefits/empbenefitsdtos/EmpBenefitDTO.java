@@ -2,18 +2,18 @@ package com.monocept.ems.employeebenefits.empbenefitsdtos;
 
 import java.sql.Date;
 
-import com.monocept.ems.employeebenefits.empbenefitsentities.EmployeeRespectiveBenefitModel;
+import com.monocept.ems.employeebenefits.empbenefitsentities.EmpBenefitModel;
 
-public class EmployeeRespectiveBenefitDTO {
+public class EmpBenefitDTO {
     private Integer employeeBenefitId;
     private Integer employeeId;
     private Integer benefitId;
     private Date startDate;
     private Date endDate;
 
-    public EmployeeRespectiveBenefitModel toEmpRespectiveBenefitModel(){
-        EmployeeRespectiveBenefitModel employeeRespectiveBenefitsModel
-            = new EmployeeRespectiveBenefitModel();
+    public EmpBenefitModel toEmpRespectiveBenefitModel(){
+        EmpBenefitModel employeeRespectiveBenefitsModel
+            = new EmpBenefitModel();
         
         employeeRespectiveBenefitsModel
             .setEmployeeBenefitId(this.employeeBenefitId);

@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.monocept.ems.employeebenefits.empbenefitsdtos.BenefitDTO;
-import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
 
 
 public interface BenefitsControllerInterface {
@@ -15,8 +14,8 @@ public interface BenefitsControllerInterface {
         getBenefits();
 
     
-    ResponseEntity<List<EmployeeRespectiveBenefitDTO>> 
-        getEmployeeRespectiveBenefit(@RequestParam String empId);
+    ResponseEntity<List<BenefitDTO>> 
+        getEmpBenefit(@RequestParam String empId);
 
      
 

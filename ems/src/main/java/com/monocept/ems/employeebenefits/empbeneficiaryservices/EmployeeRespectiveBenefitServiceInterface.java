@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmpBenefitDTO;
 
 
 @Service
 public interface EmployeeRespectiveBenefitServiceInterface {
-    public List<EmployeeRespectiveBenefitDTO> 
+    public List<EmpBenefitDTO> 
     getEmployeeRespectiveBenfitList(int empId);
 }

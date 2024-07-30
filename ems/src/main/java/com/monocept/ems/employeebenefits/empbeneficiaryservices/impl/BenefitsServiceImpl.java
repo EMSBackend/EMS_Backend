@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 import com.monocept.ems.employeebenefits.empbeneficiaryservices.BenefitsServiceInterface;
 import com.monocept.ems.employeebenefits.empbenefitsdtos.BenefitDTO;
-import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmpBenefitDTO;
 import com.monocept.ems.employeebenefits.empbenefitsentities.BenefitModel;
-import com.monocept.ems.employeebenefits.empbenefitsentities.EmployeeRespectiveBenefitModel;
+import com.monocept.ems.employeebenefits.empbenefitsentities.EmpBenefitModel;
 import com.monocept.ems.employeebenefits.empbenefitsrepository.BenefitRepository;
-import com.monocept.ems.employeebenefits.empbenefitsrepository.EmployeeRespectiveBenefitRepository;
+import com.monocept.ems.employeebenefits.empbenefitsrepository.EmpBenefitRepository;
 
 
 @Service
@@ -20,43 +20,43 @@ public class BenefitsServiceImpl
     implements BenefitsServiceInterface{
    
     @Autowired
-    BenefitRepository beneficiaryRepository;
+    BenefitRepository benefitRepository;
 
     @Autowired
-    EmployeeRespectiveBenefitRepository employeeBenefitRepository;
+    EmpBenefitRepository empBenefitRepository;
 
     
     @Override
     public List<BenefitDTO> getBenefits() {
-        List<BenefitDTO> beneficiaryDTOList = new ArrayList<>();
+        List<BenefitDTO> benefitDTOList = new ArrayList<>();
         
-        for(BenefitModel beneficiaryModel 
-            : beneficiaryRepository.findAll()){
-            beneficiaryDTOList.add(beneficiaryModel.tobeneficiaryDTO());
+        for(BenefitModel benefitModel 
+            : benefitRepository.findAll()){
+            benefitDTOList.add(benefitModel.tobenefitDTO());
         }
 
-        return beneficiaryDTOList;
+        return benefitDTOList;
     }
 
 
     
 
     @Override
-    public List<EmployeeRespectiveBenefitDTO> 
-    getEmployeeRespectiveBenfitList(int empId) {
-        List<EmployeeRespectiveBenefitDTO> employeeRespectiveBenefitDTOList 
+    public List<BenefitDTO>
+    getEmpBenefitList(int empId) {
+        List<BenefitDTO> empBenefitDTOList 
             = new ArrayList<>();
         
-        for(EmployeeRespectiveBenefitModel employeeRespectiveBenefitModel 
-                : employeeBenefitRepository.findByEmployeeId(empId)){
+        for(BenefitModel empBenefitModel 
+                : benefitRepository.findByBeneficiaryId(empId)){
                 
-                employeeRespectiveBenefitDTOList
+                empBenefitDTOList
                     .add(
-                        employeeRespectiveBenefitModel
-                        .toEmpRespectiveBenefitModel());
+                        empBenefitModel
+                        .tobenefitDTO());
         }
 
-        return employeeRespectiveBenefitDTOList;
+        return empBenefitDTOList;
         
     }
 

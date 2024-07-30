@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.monocept.ems.employeebenefits.empbeneficiaryservices.impl.BenefitsServiceImpl;
 import com.monocept.ems.employeebenefits.empbenefitscontrollers.BenefitsControllerInterface;
 import com.monocept.ems.employeebenefits.empbenefitsdtos.BenefitDTO;
-import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmpBenefitDTO;
 
 
 
@@ -60,15 +60,15 @@ public class BenefitsControllerImpl
 
     @Override
     @GetMapping("/employee")
-    public ResponseEntity<List<EmployeeRespectiveBenefitDTO>> 
-        getEmployeeRespectiveBenefit(@RequestParam String empId) {
+    public ResponseEntity<List<BenefitDTO>> 
+        getEmpBenefit(@RequestParam String empId) {
 
         try{
            int id = Integer.parseInt(empId);
            
-           List<EmployeeRespectiveBenefitDTO> resultList 
+           List<BenefitDTO> resultList 
             =   benefitsServiceImpl
-            .getEmployeeRespectiveBenfitList(id);
+            .getEmpBenefitList(id);
         
             
             return ResponseEntity

@@ -9,12 +9,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.monocept.ems.employeebenefits.empbenefitsdtos.EmployeeRespectiveBenefitDTO;
+import com.monocept.ems.employeebenefits.empbenefitsdtos.EmpBenefitDTO;
 
 @Entity
 @Table(name = "employee_benefits")
 
-public class EmployeeRespectiveBenefitModel {
+public class EmpBenefitModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "employee_benefit_id")
@@ -87,9 +87,9 @@ public class EmployeeRespectiveBenefitModel {
     }
 
     
-    public EmployeeRespectiveBenefitDTO toEmpRespectiveBenefitModel(){
-        EmployeeRespectiveBenefitDTO employeeRespectiveBenefitDTO
-            = new EmployeeRespectiveBenefitDTO();
+    public EmpBenefitDTO toEmpRespectiveBenefitModel(){
+        EmpBenefitDTO employeeRespectiveBenefitDTO
+            = new EmpBenefitDTO();
         
         employeeRespectiveBenefitDTO
             .setEmployeeBenefitId(this.employeeBenefitId);

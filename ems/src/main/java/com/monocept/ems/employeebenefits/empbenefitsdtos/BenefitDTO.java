@@ -135,19 +135,19 @@ public class BenefitDTO {
     
     public BenefitModel toBeneficiaryModel(){
         BenefitModel beneficiaryModel = new BenefitModel();
-        beneficiaryModel.setBenefit_id(this.benefit_id);
+        beneficiaryModel.setBenefitId(this.benefit_id);
         
-        beneficiaryModel.setBenefit_name(this.benefit_name);
+        beneficiaryModel.setBenefitName(this.benefit_name);
         beneficiaryModel.setDescription(this.description);
-        beneficiaryModel.setStart_date(this.start_date);
-        beneficiaryModel.setEnd_date(this.end_date);
+        beneficiaryModel.setStartDate(this.start_date);
+        beneficiaryModel.setEndDate(this.end_date);
 
         
-        beneficiaryModel.setBeneficiary_id(this.beneficiary_id);
-        beneficiaryModel.setBeneficiary_cost(this.beneficiary_cost);
-        beneficiaryModel.setBeneficiary_desc(this.beneficiary_desc);
-        beneficiaryModel.setBeneficiary_duration_months(this.beneficiary_duration_months);
-        beneficiaryModel.setBeneficiary_name(this.beneficiary_name);
+        beneficiaryModel.setBeneficiaryId(this.beneficiary_id);
+        beneficiaryModel.setBeneficiaryCost(this.beneficiary_cost);
+        beneficiaryModel.setBeneficiaryDesc(this.beneficiary_desc);
+        beneficiaryModel.setBeneficiaryDurationMonths(this.beneficiary_duration_months);
+        beneficiaryModel.setBeneficiaryName(this.beneficiary_name);
 
 
         return beneficiaryModel;
